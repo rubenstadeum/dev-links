@@ -15,7 +15,6 @@ body {
     font-size: 1.6rem;
     background: url(./assets/bg-dark.jpg) no-repeat top center/cover;
     height: 100vh;
-    padding: 4rem;
 }
 
 body * {
@@ -24,13 +23,9 @@ body * {
 }
 
 #container {
-    max-width: 58.8rem;
-    margin: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 36rem;
+    margin: 5.6rem auto 0;
+    padding: 0 2.4rem;
 }
 
 .profile {
@@ -60,6 +55,8 @@ body * {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    padding: 2.4rem 0;
 }
 
 .links li a {
@@ -85,4 +82,35 @@ body * {
 .links li a:hover {
     background: rgba(255, 255, 255, 0.05);
     border: 1.5px solid white;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2.4rem 0;
+    
+    font-size: 2.4rem;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+    border-radius: 50%;
+
+    transition: background .2s;
+}
+
+.social a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    padding: 2.4rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
