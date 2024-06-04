@@ -54,3 +54,35 @@ body * {
     margin-top: .8rem;
     text-decoration: none;
 }
+
+.links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.links li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.6rem 2.4rem;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background .2s;
+}
+
+.links li a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid white;
+}
