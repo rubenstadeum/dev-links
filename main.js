@@ -1,6 +1,6 @@
-const html = document.documentElement
+const theme = document.querySelector('#theme')
 
-html.addEventListener('click', handleTryClick)
+theme.addEventListener('click', handleTryClick)
 
 function handleTryClick() {
     toggleMode()
