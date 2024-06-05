@@ -1,103 +1,104 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     box-sizing: border-box;
-
-    -webkit-font-smoothing: antialiased;
 }
-
+  
 :root {
     font-size: 62.5%;
 
     --text-color: #ffffff;
-    --bg-url: url(./assets/bg-dark.jpg);
+    --bg-url: url(./assets/bg-mobile.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
     --highlight-color: rgba(255, 255, 255, 0.2);
     --switch-bg-url: url(./assets/moon-stars.svg);
 }
-
+  
 .light {
     --text-color: #000000;
-    --bg-url: url(./assets/bg-light.jpg);
+    --bg-url: url(./assets/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(./assets/sun.svg);
 }
-
+  
 body {
-    font-size: 1.6rem;
     background: var(--bg-url) no-repeat top center/cover;
     height: 100vh;
 }
-
+  
 body * {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     color: var(--text-color);
 }
-
+  
 #container {
     width: 100%;
-    max-width: 58rem;
-    margin: 5.6rem auto 0;
-    padding: 0 2.4rem;
+    max-width: 588px;
+    margin: 5.6rem auto 0px;
+    padding: 0 24px;
 }
 
-.profile {
-    padding: 2.4rem;
+#profile {
+    text-align: center;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-
-.profile img {
+  
+#profile img {
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid gray;
 }
-
-.profile a {
+  
+#profile a {
+    font-size: 1.6rem;
     font-weight: 500;
     line-height: 2.4rem;
     margin-top: .8rem;
     text-decoration: none;
 }
-
+  
 #theme {
     position: relative;
     width: 6.4rem;
-
-    margin: 0 auto;
-    padding: 2rem 0;
+  
+    margin: .4rem auto;
 }
-
+  
 #theme button {
     width: 3.2rem;
     height: 3.2rem;
     background: white var(--switch-bg-url) no-repeat center;
-    border: none;
+    border: 0;
     border-radius: 50%;
-    cursor: pointer;
-
+  
     position: absolute;
     top: 50%;
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
-
-    animation: slide-back .2s;
+  
+    animation: slide-back 0.2s;
 }
-
+  
 .light #theme button {
-    animation: slide-in .4s forwards;
+    animation: slide-in 0.2s forwards;
 }
-
+  
+#theme button:hover {
+    outline: 8px solid var(--highlight-color);
+}
+  
 #theme span {
     display: block;
     width: 6.4rem;
@@ -109,85 +110,85 @@ body * {
     border-radius: 9999px;
 }
 
-.links {
+ul {
     list-style: none;
+  
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-
+  
     padding: 2.4rem 0;
 }
-
-.links li a {
+  
+ul li a {
     display: flex;
-    justify-content: center;
     align-items: center;
-
+    justify-content: center;
+    
     padding: 1.6rem 2.4rem;
-
+    
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
     border-radius: 8px;
-
+    
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-
+    
+    font-size: 2rem;
     text-decoration: none;
     font-weight: 500;
-
-    transition: background .2s;
+  
+    transition: background 0.2s;
 }
 
-.links li a:hover {
+ul li a:hover {
     background: var(--surface-color-hover);
     border: 1.5px solid var(--text-color);
 }
 
-.social {
+#social {
     display: flex;
-    align-items: center;
     justify-content: center;
-
+  
     padding: 2.4rem 0;
-    
+  
     font-size: 2.4rem;
 }
-
-.social a {
+  
+#social a {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1.6rem;
+  
+    transition: background 0.2s;
     border-radius: 50%;
-
-    transition: background .2s;
 }
-
-.social a:hover {
+  
+#social a:hover {
     background: var(--highlight-color);
 }
-
+  
 footer {
     padding: 2.4rem 0;
     text-align: center;
     font-size: 1.4rem;
-    font-weight: 400;
 }
-
+  
 @keyframes slide-in {
     from {
-        left: 0;
+      left: 0;
     }
     to {
-        left: 50%;
+      left: 50%;
     }
 }
-
+  
 @keyframes slide-back {
     from {
-        left: 50%;
+      left: 50%;
     }
     to {
-        left: 0;
+      left: 0;
     }
 }
